@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Listas dependientes - (Java Script)</title>
+
+
+
+<script language="JavaScript" src="/style/scripts.js"></script>
+<link href="/style/webexperto_styles.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+body {
+	background-image: url(/style/background.jpg);
+}
+-->
+</style>
+
+<script language="JavaScript">
+function cambiar()
+{
+var index=document.forms.formulario.trimestres.selectedIndex;
+
+formulario.meses.length=0;
+
+if(index==0) trimestre1();
+if(index==1) trimestre2();
+if(index==2) trimestre3();
+if(index==3) trimestre4();
+}
+
+function trimestre1(){
+opcion0=new Option("Enero","Enero","defauldSelected");
+opcion1=new Option("Febrero","Febrero");
+opcion2=new Option("Marzo","Marzo");
+
+document.forms.formulario.meses.options[0]=opcion0;
+document.forms.formulario.meses.options[1]=opcion1;
+document.forms.formulario.meses.options[2]=opcion2;
+}
+
+function trimestre2(){
+opcion0=new Option("Abril","Abril","defauldSelected");
+opcion1=new Option("Mayo","Mayo");
+opcion2=new Option("Junio","Junio");
+
+document.forms.formulario.meses.options[0]=opcion0;
+document.forms.formulario.meses.options[1]=opcion1;
+document.forms.formulario.meses.options[2]=opcion2;
+}
+
+function trimestre3(){
+opcion0=new Option("Julio","Julio","defauldSelected");
+opcion1=new Option("Agosto","Agosto");
+opcion2=new Option("Septiembre","Septiembre");
+
+document.forms.formulario.meses.options[0]=opcion0;
+document.forms.formulario.meses.options[1]=opcion1;
+document.forms.formulario.meses.options[2]=opcion2;
+}
+
+function trimestre4(){
+opcion0=new Option("Octubre","Octubre","defauldSelected");
+opcion1=new Option("Noviembre","Noviembre");
+opcion2=new Option("Diciembre","Diciembre");
+
+document.forms.formulario.meses.options[0]=opcion0;
+document.forms.formulario.meses.options[1]=opcion1;
+document.forms.formulario.meses.options[2]=opcion2;
+}
+
+</script>
+
+</head>
+<body>
+
+<form name="formulario" method="post" action="">
+<div align="center">Trimestre
+<select name="trimestres" OnChange="cambiar()">
+<option value="1er. Trimestre" selected>1er. Trimestre</option>
+<option value="2do. Trimestre">2er. Trimestre</option>
+<option value="3er. Trimestre">3er. Trimestre</option>
+<option value="4to. Trimestre">4to. Trimestre</option>
+</select>
+Meses
+<select name="meses">
+<option value="Enero" selected>Enero</option>
+<option value="Febrero">Febrero</option>
+<option value="Marzo">Marzo</option>
+</select>
+</div>
+</form>
+
+</body>
+</html>
